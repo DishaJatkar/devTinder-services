@@ -44,6 +44,14 @@ const userSchema = new mongoose.Schema(
     },
     skills: {
       type: [String], // Array of strings for skills
+      validate(value) {
+        if (value.length < 1) {
+          throw new Error("Skills array must contain at least one skill");
+        }
+        if (value.length > 5) {
+          throw new Error("Skills array must not contain more than 10 skills");
+        }
+      },
     },
   },
   { timestamps: true }
