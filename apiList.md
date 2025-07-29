@@ -3,7 +3,7 @@
 ## authRouter
 - POST /signup
 - POST /login
-- POST logout
+- POST /logout
 
 ## profileRouter
 - GET /profile/view
